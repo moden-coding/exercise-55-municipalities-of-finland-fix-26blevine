@@ -3,8 +3,10 @@
 import pandas as pd
 
 def municipalities_of_finland():
-    pass
-    
+    data = pd.read_csv("src/municipal.tsv", sep="\t", index_col="Region 2018")
+
+    return data["Akaa":"Äänekoski"]
+
 def main():
     print(municipalities_of_finland())
     
